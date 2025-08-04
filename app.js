@@ -7,11 +7,14 @@ const app = express();
 
 const port = 3000;
 
+//recupero il router
+const postsRouter = require(`./routers/postRouters`);
+
 //aggiungo gli asset statici
 
 app.use(express.static(`public`));
 
-
+app.use(`/posts`, postsRouter);
 
 //*definisco la rotta base del server
 
@@ -23,6 +26,9 @@ app.listen(port, () => {
   console.log(`server del blog in attesa nella porta ${port}`)
 
 });
+
+
+
 
 
 
