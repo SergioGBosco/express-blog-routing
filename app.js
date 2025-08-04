@@ -9,7 +9,9 @@ const port = 3000;
 
 //aggiungo gli asset statici
 
-app.use(express.static(`public`))
+app.use(express.static(`public`));
+
+
 
 //*definisco la rotta base del server
 
